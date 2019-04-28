@@ -1,0 +1,21 @@
+{
+  "name": "@monorepo-design-system/accordion",
+  "version": "1.0.0",
+  "description": "design system with monorepo enabled - accordion",
+  "main": "index.js",
+  "private": true,
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MansoorBashaBellary/monorepo-design-system.git",
+    "directory": "packages/accordion"
+  },
+  "author": "Mansoor Basha Bellary",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/MansoorBashaBellary/monorepo-design-system/issues"
+  },
+  "homepage": "https://github.com/MansoorBashaBellary/monorepo-design-system/packages/accordion#readme",
+  "devDependencies": {
+    "vue-accordion": "1.0.0"
+  }
+}

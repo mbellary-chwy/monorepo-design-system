@@ -2,9 +2,11 @@
   "name": "monorepo-design-system",
   "version": "1.0.0",
   "description": "design system with monorepo enabled",
-  "main": "index.js",
+  "main": "packages/app/index.js",
+  "private": true,
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "bootstrap": "lerna bootstrap",
+    "clean": "lerna clean"
   },
   "repository": {
     "type": "git",
@@ -16,9 +18,25 @@
     "url": "https://github.com/MansoorBashaBellary/monorepo-design-system/issues"
   },
   "homepage": "https://github.com/MansoorBashaBellary/monorepo-design-system#readme",
-  "dependencies": {
+  "devDependencies": {
     "@babel/core": "7.4.4",
+    "@babel/plugin-syntax-dynamic-import": "^7.2.0",
+    "@babel/plugin-proposal-class-properties": "^7.3.3",
+    "@babel/plugin-proposal-decorators": "^7.3.0",
+    "@babel/plugin-proposal-export-default-from": "^7.2.0",
+    "@babel/plugin-proposal-object-rest-spread": "^7.2.0",
+    "@babel/preset-env": "^7.4.1",
     "@storybook/vue": "5.0.10",
+    "babel-core": "^7.0.0-bridge.0",
+    "babel-loader": "^8.0.5",
+    "babel-plugin-dynamic-import-node": "^2.2.0",
+    "babel-preset-vue": "^2.0.2",
     "lerna": "3.13.4"
-  }
+  },
+  "dependencies": {
+    "vue": "2.6.10"
+  },
+  "workspaces": [
+    "packages/*"
+  ]
 }
