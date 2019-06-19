@@ -1,6 +1,6 @@
 {
   "name": "@mansoorbashabellary/accordion-ds",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "license": "UNLICENSED",
   "publishConfig": {
     "access": "public"
@@ -11,6 +11,7 @@
     "lint": "vue-cli-service lint",
     "commit": "git-cz",
     "preversion": "yarn",
+    "changelog": "yarn conventional-changelog -p angular -i CHANGELOG.md -s",
     "version": "yarn changelog && git add CHANGELOG.md",
     "version:recommend": "conventional-recommended-bump -p angular",
     "postversion": "git push && git push --tags && conventional-github-releaser -p angular"
