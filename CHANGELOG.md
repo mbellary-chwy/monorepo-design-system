@@ -1,3 +1,13 @@
+<a name="1.0.7"></a>
+## [1.0.7](https://github.com/MansoorBashaBellary/monorepo/compare/v1.0.6...v1.0.7) (2019-06-19)
+
+
+### Features
+
+* **monorepo-ds:** package update ([1d70f0e](https://github.com/MansoorBashaBellary/monorepo/commit/1d70f0e))
+
+
+
 <a name="1.0.6"></a>
 ## [1.0.6](https://github.com/MansoorBashaBellary/monorepo/compare/v1.0.5...v1.0.6) (2019-06-19)
 
