@@ -1,13 +1,13 @@
-import uniqueId from 'lodash/uniqueId';
-import Tabs from '@mansoorbashabellary/tabs/src';
+import uniqueId from "lodash/uniqueId";
+import Tabs from "@mansoorbashabellary/tabs/src";
 
-const TRIGGER_WRAPPER_CLASS = 'trigger-wrapper';
-const TRIGGER_CLASS = 'trigger';
-const CONTENT_CLASS = 'content';
-const TRIGGER_DISABLED_CLASS = 'pill';
-const DISABLED_CLASS = 'disabled';
-const OPEN_CLASS = 'open';
-const SINGLE_OPEN_KEY = 'singleOpen';
+const TRIGGER_WRAPPER_CLASS = "trigger-wrapper";
+const TRIGGER_CLASS = "trigger";
+const CONTENT_CLASS = "content";
+const TRIGGER_DISABLED_CLASS = "pill";
+const DISABLED_CLASS = "disabled";
+const OPEN_CLASS = "open";
+const SINGLE_OPEN_KEY = "singleOpen";
 
 const UP_ARROW_KEY = 38;
 const DOWN_ARROW_KEY = 40;
@@ -32,27 +32,27 @@ export default class Accordion {
   }
 
   createUniqueId() {
-    return uniqueId('cw-accordion-item-');
+    return uniqueId("cw-accordion-item-");
   }
 
   setUpAriaAttributes() {
-    this.container.setAttribute('role', 'presentation');
+    this.container.setAttribute("role", "presentation");
 
     this.triggerWrappers.forEach((element, index) => {
       const uniqueId = this.createUniqueId();
       const triggerElem = this.triggers[index];
       const contentElem = this.contents[index];
-      element.setAttribute('role', 'heading');
+      element.setAttribute("role", "heading");
 
-      triggerElem.setAttribute('role', 'button');
-      triggerElem.setAttribute('id', uniqueId);
-      triggerElem.setAttribute('aria-controls', `${uniqueId}-panel`);
-      triggerElem.setAttribute('aria-expanded', false);
+      triggerElem.setAttribute("role", "button");
+      triggerElem.setAttribute("id", uniqueId);
+      triggerElem.setAttribute("aria-controls", `${uniqueId}-panel`);
+      triggerElem.setAttribute("aria-expanded", false);
 
-      contentElem.setAttribute('role', 'region');
-      contentElem.setAttribute('aria-labelledby', uniqueId);
-      contentElem.setAttribute('id', `${uniqueId}-panel`);
-      contentElem.setAttribute('aria-hidden', true);
+      contentElem.setAttribute("role", "region");
+      contentElem.setAttribute("aria-labelledby", uniqueId);
+      contentElem.setAttribute("id", `${uniqueId}-panel`);
+      contentElem.setAttribute("aria-hidden", true);
     });
   }
 
@@ -67,9 +67,9 @@ export default class Accordion {
 
   setUpEvents() {
     this.triggers.forEach(element => {
-      this.triggerIds.push(element.getAttribute('id'));
-      element.addEventListener('click', this._clickHandler);
-      element.addEventListener('keydown', this._keyDownHandler);
+      this.triggerIds.push(element.getAttribute("id"));
+      element.addEventListener("click", this._clickHandler);
+      element.addEventListener("keydown", this._keyDownHandler);
     });
   }
 
@@ -103,7 +103,7 @@ export default class Accordion {
 
   keyDownHandler(event) {
     event.preventDefault();
-    const elemId = event.target.getAttribute('id');
+    const elemId = event.target.getAttribute("id");
     const currentIndex = this.triggerIds.indexOf(elemId);
     const isFirst = this.isFirst(currentIndex);
     const isLast = this.isLast(currentIndex);
@@ -153,22 +153,22 @@ export default class Accordion {
 
   close(elem) {
     const triggerElem = elem.querySelector(`.${TRIGGER_CLASS}`);
-    const contentId = triggerElem.getAttribute('aria-controls');
+    const contentId = triggerElem.getAttribute("aria-controls");
     const contentElem = this.container.querySelector(`#${contentId}`);
 
     if (contentElem) {
       elem.classList.remove(OPEN_CLASS);
       contentElem.classList.remove(OPEN_CLASS);
       contentElem.style.maxHeight = 0;
-      triggerElem.setAttribute('aria-expanded', false);
-      contentElem.setAttribute('aria-hidden', true);
+      triggerElem.setAttribute("aria-expanded", false);
+      contentElem.setAttribute("aria-hidden", true);
     }
   }
 
   open(elem) {
     const noAnimation = elem.dataset.noanimation || false;
     const triggerElem = elem.querySelector(`.${TRIGGER_CLASS}`);
-    const contentId = triggerElem.getAttribute('aria-controls');
+    const contentId = triggerElem.getAttribute("aria-controls");
     const contentElem = this.container.querySelector(`#${contentId}`);
 
     elem.classList.add(OPEN_CLASS);
@@ -179,11 +179,11 @@ export default class Accordion {
         const contentHeight = contentElem.scrollHeight;
         contentElem.style.maxHeight = `${contentHeight}px`;
       } else {
-        contentElem.style.maxHeight = 'none';
+        contentElem.style.maxHeight = "none";
       }
 
-      triggerElem.setAttribute('aria-expanded', true);
-      contentElem.setAttribute('aria-hidden', false);
+      triggerElem.setAttribute("aria-expanded", true);
+      contentElem.setAttribute("aria-hidden", false);
     }
   }
 
@@ -196,7 +196,7 @@ export default class Accordion {
   closeAll() {
     this.triggerWrappers.forEach(element => {
       const triggerElem = element.querySelector(`.${TRIGGER_CLASS}`);
-      const contentId = triggerElem.getAttribute('aria-controls');
+      const contentId = triggerElem.getAttribute("aria-controls");
       const contentElem = this.container.querySelector(`#${contentId}`);
 
       element.classList.remove(OPEN_CLASS);
@@ -207,8 +207,8 @@ export default class Accordion {
 
   destroy() {
     this.triggers.forEach(element => {
-      element.removeEventListener('click', this._clickHandler);
-      element.removeEventListener('keydown', this._keyDownHandler);
+      element.removeEventListener("click", this._clickHandler);
+      element.removeEventListener("keydown", this._keyDownHandler);
     });
     this.container.remove();
   }
