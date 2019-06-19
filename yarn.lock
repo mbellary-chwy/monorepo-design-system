@@ -1593,14 +1593,6 @@
     npmlog "^4.1.2"
     write-file-atomic "^2.3.0"
 
-"@mansoorbashabellary/tabs@^1.0.0":
-  version "1.2.2"
-  resolved "https://registry.yarnpkg.com/@mansoorbashabellary/tabs/-/tabs-1.2.2.tgz#3b4672bf150a0269efe4c36a17e3556c51e36464"
-  integrity sha512-5IXWc9UpTZm+noRmjhCnu+SQ5hb/ITmAJ6cwmA8tQNqa4b9ssVyKO26PN+5V1UP4O0WJUdbAenb8hkpKArSJaA==
-  dependencies:
-    core-js "^2.6.5"
-    vue "^2.6.10"
-
 "@marionebl/sander@^0.6.0":
   version "0.6.1"
   resolved "https://registry.yarnpkg.com/@marionebl/sander/-/sander-0.6.1.tgz#1958965874f24bc51be48875feb50d642fc41f7b"
