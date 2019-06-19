@@ -1,3 +1,18 @@
+<a name="1.0.8"></a>
+## [1.0.8](https://github.com/MansoorBashaBellary/monorepo/compare/v1.0.7...v1.0.8) (2019-06-19)
+
+
+### Features
+
+* **accordion-ds:** package update ([4eb7a0b](https://github.com/MansoorBashaBellary/monorepo/commit/4eb7a0b))
+* **accordion-ds:** package update ([7453df5](https://github.com/MansoorBashaBellary/monorepo/commit/7453df5))
+* **accordion-ds:** package update ([6624aa2](https://github.com/MansoorBashaBellary/monorepo/commit/6624aa2))
+* **accordion-ds:** package update ([a17f1f3](https://github.com/MansoorBashaBellary/monorepo/commit/a17f1f3))
+* **accordion-ds:** package update ([64af3f1](https://github.com/MansoorBashaBellary/monorepo/commit/64af3f1))
+* **accordion-ds:** package update ([645bc24](https://github.com/MansoorBashaBellary/monorepo/commit/645bc24))
+
+
+
 <a name="1.0.6"></a>
 ## [1.0.6](https://github.com/MansoorBashaBellary/monorepo/compare/v1.0.7...v1.0.6) (2019-06-19)
 
