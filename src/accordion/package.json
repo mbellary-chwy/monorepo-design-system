@@ -1,6 +1,6 @@
 {
   "name": "@mansoorbashabellary/accordion-ds",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "license": "UNLICENSED",
   "publishConfig": {
     "access": "public"
@@ -14,7 +14,7 @@
     "changelog": "yarn conventional-changelog -p angular -i CHANGELOG.md -s",
     "version": "yarn changelog && git add CHANGELOG.md",
     "version:recommend": "conventional-recommended-bump -p angular",
-    "postversion": "git push && git push --tags && conventional-github-releaser -p angular"
+    "postversion": "git push && git push --tags"
   },
   "gitHooks": {
     "pre-commit": "lint-staged && yarn test && yarn build",
