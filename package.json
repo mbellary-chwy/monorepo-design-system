@@ -1,6 +1,6 @@
 {
-  "name": "@mansoorbashabellary/monorepo",
-  "version": "1.0.1",
+  "name": "@mansoorbashabellary/monorepo-ds",
+  "version": "1.0.0",
   "license": "UNLICENSED",
   "workspaces": [
     "src/*"
