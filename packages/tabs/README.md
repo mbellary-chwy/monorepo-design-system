@@ -1,1 +1,0 @@
-# monorepo-design-system tabs
