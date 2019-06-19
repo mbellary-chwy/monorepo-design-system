@@ -17,5 +17,7 @@ const ENTER_KEY = 13;
 const SPACE_KEY = 32;
 
 export default class Accordion {
-  constructor(container, options) {}
+  constructor(container, options) {
+    console.log('ACCORDION');
+  }
 }
