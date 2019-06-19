@@ -1,6 +1,6 @@
 {
   "name": "@mansoorbashabellary/accordion-ds",
-  "version": "1.0.2",
+  "version": "1.0.0",
   "license": "UNLICENSED",
   "publishConfig": {
     "access": "public"
@@ -8,9 +8,7 @@
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "NODE_ENV=production VUE_APP_BUILD_TARGET=js-components vue-cli-service build --no-clean",
-    "lint": "vue-cli-service lint",
-    "changelog": "yarn conventional-changelog -p angular -i CHANGELOG.md -s",
-    "commit": "git-cz"
+    "lint": "vue-cli-service lint"
   },
   "repository": {
     "type": "git",
