@@ -1,6 +1,6 @@
 {
   "name": "@mansoorbashabellary/accordion-ds",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "license": "UNLICENSED",
   "publishConfig": {
     "access": "public"
@@ -15,6 +15,35 @@
     "version": "yarn changelog && git add CHANGELOG.md",
     "version:recommend": "conventional-recommended-bump -p angular",
     "postversion": "git push && git push --tags && conventional-github-releaser -p angular"
+  },
+  "gitHooks": {
+    "pre-commit": "lint-staged && yarn test && yarn build",
+    "commit-msg": "commitlint -e $GIT_PARAMS"
+  },
+  "lint-staged": {
+    "linters": {
+      "**/*.js": [
+        "prettier --write",
+        "eslint --no-ignore",
+        "git add"
+      ],
+      "**/*.{scss,sass}": [
+        "sass-lint -v"
+      ]
+    },
+    "ignore": [
+      "src/js-lib/vendor/**"
+    ]
+  },
+  "commitlint": {
+    "extends": [
+      "@commitlint/config-angular"
+    ]
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
   },
   "repository": {
     "type": "git",
@@ -37,6 +66,10 @@
     "@vue/cli-service": "^3.8.0",
     "@vue/eslint-config-standard": "^4.0.0",
     "babel-eslint": "^10.0.1",
+    "commitizen": "^3.0.4",
+    "conventional-changelog-cli": "^1.3.21",
+    "conventional-github-releaser": "^3.1.2",
+    "conventional-recommended-bump": "^4.0.4",
     "eslint": "^5.16.0",
     "eslint-plugin-vue": "^5.0.0",
     "lerna": "^3.14.1",
