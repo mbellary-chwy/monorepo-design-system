@@ -19,7 +19,8 @@
     "commit": "git-cz",
     "preversion": "yarn",
     "version": "yarn changelog && git add CHANGELOG.md",
-    "version:recommend": "conventional-recommended-bump -p angular"
+    "version:recommend": "conventional-recommended-bump -p angular",
+    "postversion": "git push && git push --tags && conventional-github-releaser -p angular"
   },
   "repository": {
     "type": "git",
